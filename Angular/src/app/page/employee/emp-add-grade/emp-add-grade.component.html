@@ -1,0 +1,99 @@
+<main id="main" class="main">
+    <!-- New Employee Form  -->
+    <div class="col-12">
+        <div class="card recent-sales overflow-auto">
+
+
+            <div class="card-body">
+                <h5 class="card-title">New Salary Grade And List </h5>
+
+                <section class="section">
+                    <div class="row">
+                        <div class="col-lg-10">
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Add Grade Based On Salary Range
+                                    </h5>
+                                      <div style="background-color: rgba(0,255,0,0.4)" *ngIf="submited">
+                                          <p>Salary Grade Add succsfully</p>
+                                      </div>
+                                    <!-- New Employee Form Elements -->
+                                    <form (ngSubmit)="saveSG(sgForm)" #sgForm="ngForm" >
+                                        <input type="hidden" class="form-control" [(ngModel)]="salaryG.sg_id" name="sg_id">
+                                        <div class="row mb-3">
+                                            <label class="col-sm-3 col-form-label">Salary Grade Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" [(ngModel)]="salaryG.sg_name" name="sg_name">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="inputText" class="col-sm-3 col-form-label"> Basic
+                                                Salary </label>
+                                            <div class="col-sm-9">
+                                                <input id="inputText" type="number" class="form-control" [(ngModel)]="salaryG.basicSalary" name="basicSalary">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col-sm-9">
+                                                <button type="submit"  class="btn btn-primary">Add Salary Grade</button>
+                                            </div>
+                                        </div>
+
+                                    </form><!-- End General Form Elements -->
+
+                                </div>
+                            </div>
+
+                            <!-- <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">List Of Salary Grade </h5> -->
+                                    <!-- New Salary Grade Form Elements -->
+
+                                    <!-- <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th> Grade</th>
+                                                <th> Grade Name</th>
+                                                <th> Basic Salary</th>
+                                                <th> House Rent</th>
+                                                <th> Health Allowance</th>
+                                                <th> Total Salary</th>
+                                                <th> Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let sgd of salaryGList; index as i;">
+                                                <th> {{i+1}} </th>
+                                                <th> {{sgd.sg_name}}</th>
+                                                <th>{{sgd.basicSalary}}</th>
+                                                <th>{{sgd.houseRant}}</th>
+                                                <th>{{sgd.healthRant}}</th>
+                                                <th>{{sgd.totalSalary}}</th>
+                                                <td>
+                                                    <a class="btn btn-danger" (click)="deleteByID(sgd.sg_id)">Delete</a>
+                                                    <a class="btn btn-warning" (click)="getById(sgd.sg_id)">Update</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>-->
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+            </div>
+
+        </div> 
+     </div>
+
+
+</main><!-- End #main -->
